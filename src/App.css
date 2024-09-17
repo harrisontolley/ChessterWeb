@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+  min-height: 100vh;       /* Ensures the container takes at least the full viewport height */
+  background-color: #f0f0f0; /* Optional: Adds a background color */
+}
+
+/** {*/
+/*  outline: 2px dashed red;*/
+/*}*/

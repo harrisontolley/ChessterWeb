@@ -1,0 +1,108 @@
+.chess-game {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chessboard-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+
+.title-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile-chat-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.profile-picture {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name-chatbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chatbox {
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 200px;
+    width: 200px;
+    color: white;
+    margin-top: 10px;
+}
+
+.chatbox p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.loading-spinner {
+    width: 90px;
+    height: 60px;
+    margin-left: 20px;
+    align-self: center; /* Centers the spinner vertically in the gap */
+}
+
+h2 {
+    margin: 0;
+    color: #333;
+}
+
+.selected {
+    background-color: white;
+    color: #333;
+}
+
+.unselected {
+    background-color: #333;
+    color: white;
+}
+
+.popup {
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.popup button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.selected-easy {
+    background-color: green;
+    color: #fff;
+}
+
+.selected-medium {
+    background-color: yellow;
+    color: #000;
+}
+
+.selected-hard {
+    background-color: red;
+    color: #fff;
+}
