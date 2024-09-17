@@ -6,7 +6,7 @@ import GameOverPopup from "./GameOverPopup";
 import { getBestMove } from "../services/api";
 import "./styles.css";
 
-// Import images for difficulty levels
+//imgs
 import easyProfilePic from "../images/easy.jpg";
 import mediumProfilePic from "../images/medium.jpg";
 import hardProfilePic from "../images/hard.jpg";
@@ -33,10 +33,10 @@ const ChessGame: React.FC = () => {
     const [winner, setWinner] = useState<string | null>(null);
     const [showSettingsPopup, setShowSettingsPopup] = useState<boolean>(true);
     const [searchDepth, setSearchDepth] = useState<number>(3);
-    const [profilePicture, setProfilePicture] = useState<string>(mediumProfilePic); // Default to medium
-    const [isThinking, setIsThinking] = useState<boolean>(false); // New state for AI thinking
+    const [profilePicture, setProfilePicture] = useState<string>(mediumProfilePic);
+    const [isThinking, setIsThinking] = useState<boolean>(false);
     const [moveCount, setMoveCount] = useState<number>(0); // Track move count
-    const [quote, setQuote] = useState<string>("Welcome to the game!"); // Chatbox message
+    const [quote, setQuote] = useState<string>("Welcome to the game!");
 
     useEffect(() => {
         if (!showSettingsPopup) {
@@ -45,14 +45,14 @@ const ChessGame: React.FC = () => {
             setGame(newGame);
             setGameOver(false);
             setWinner(null);
-            setMoveCount(0); // Reset move count
+            setMoveCount(0);
 
             if (playerColor === "black") {
                 const makeFirstAIMove = async () => {
                     if (gameOver) return;
                     const fen = newGame.fen();
 
-                    setIsThinking(true); // Start thinking
+                    setIsThinking(true);
                     try {
                         const aiMoveUCI = await getBestMove(fen, searchDepth);
                         const aiMove = newGame.move(aiMoveUCI);
@@ -62,7 +62,7 @@ const ChessGame: React.FC = () => {
                     } catch (error) {
                         console.error("Error fetching the AI move:", error);
                     } finally {
-                        setIsThinking(false); // Stop thinking
+                        setIsThinking(false);
                     }
                 };
                 makeFirstAIMove();
